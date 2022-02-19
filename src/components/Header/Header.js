@@ -4,15 +4,14 @@ import Web3 from '../Web3/Web3';
 import Home from '../Homepage/Homepage';
 export default function Header() {
     return(
-        // <Router>
+        
             <header class="py-6 " >
                 <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
                     <div class="text-lg font-bold">Jakob Potosme</div>
                     <div class='hidden md:flex space-x-12 items-center'>
                         <Link to='personal-website/' > Home</Link> 
                         <Link to='/web3'>Web 3</Link>
-                        {/* <a href="#home" class="text-selected-text">Home</a>
-                        <a href="#web3" >Web 3</a> */}
+                        
                         <a href="#about" >About Me</a>
                         <a href="#contact" ><button class="px-6 py-2 bg-theme font-bold">Contact Me</button></a> 
                     </div>
@@ -22,13 +21,6 @@ export default function Header() {
                 </div>
             </header>
 
-            // <Routes>
-                // <Route path="/" element={ <Home />} /> 
-                // <Route path="/web3" element={ <Web3 />} /> 
-                // <Route path="*" element = {} />
-            // </Routes>
-
-        // </Router>
         
     );
 }

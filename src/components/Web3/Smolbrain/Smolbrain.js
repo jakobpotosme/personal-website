@@ -1,6 +1,7 @@
 import React, {Component, useState} from 'react'
 import { useQuery,gql, useLazyQuery} from "@apollo/client";
-// "0x6325439389e0797ab35752b4f43a14c004f22a9c-0x1"
+
+
 const GET_SMOL_BY_ID = gql`
    query Token($id: String!) {
     token(id: $id) {
@@ -17,11 +18,9 @@ const GET_SMOL_BY_ID = gql`
 function Smolbrain() {
 
   const [smolId, setSmolId] = useState("")
-  // let temp = '0x6325439389e0797ab35752b4f43a14c004f22a9c-'+smolId.toLowerCase();
-  // const [fetchSmol, {called,loading, data: smolSearchedData,error: smolError}] = useLazyQuery(GET_SMOL_BY_ID, {variables: {
-  //       id: temp
-  //     }})
+
   function DisplayData(){
+
     let temp = '0x6325439389e0797ab35752b4f43a14c004f22a9c-'+smolId.toLowerCase();
     const [fetchSmol, {called,loading, data: smolSearchedData,error: smolError}] = useLazyQuery(GET_SMOL_BY_ID, {variables: {
           id: temp
@@ -40,16 +39,6 @@ function Smolbrain() {
     )
   }
   
-      
-        
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-
-  //   fetchSmol
-  //   setSmolId("");
-
-  // }
-
 
   return (
     <div class='container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full pt-10'>
@@ -62,12 +51,6 @@ function Smolbrain() {
       />
 
       <DisplayData />
-      {/* <button onClick={fetchSmol}>Search</button>
-
-      
-      <div>
-        {smolSearchedData && <div> <h1> Smol: {smolSearchedData.token.name}</h1> <img src = {smolSearchedData.token.image} alt="SmolBrain" /> </div>}
-      </div> */}
 
     </div>
   )
