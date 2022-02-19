@@ -18,7 +18,7 @@ function App() {
 
 
       <Routes>
-        <Route path="/" element={ <Home />} /> 
+        <Route path="personal-website/" element={ <Home />} /> 
         <Route path="/web3" element={ <Web3 />} /> 
         {/* <Route path="*" element = {} /> */}
       </Routes>

@@ -9,7 +9,7 @@ export default function Header() {
                 <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
                     <div class="text-lg font-bold">Jakob Potosme</div>
                     <div class='hidden md:flex space-x-12 items-center'>
-                        <Link to='/' > Home</Link> 
+                        <Link to='personal-website/' > Home</Link> 
                         <Link to='/web3'>Web 3</Link>
                         {/* <a href="#home" class="text-selected-text">Home</a>
                         <a href="#web3" >Web 3</a> */}
