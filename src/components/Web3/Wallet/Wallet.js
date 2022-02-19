@@ -44,12 +44,14 @@ const Wallet = () => {
   return (
     <div class='container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full pt-10' >
         {/* <h4>{"Connection to MetaMask using window.ethereum methods"} </h4> */}
-        <button onClick={connectWalletHandler} > {connButtonText} </button>
+        <button class="px-6 py-2 bg-theme text-white font-bold" onClick={connectWalletHandler} > {connButtonText} </button>
         <div >
-            <h3> Address: {defaultAccount}</h3>
+            <label class="text-white block mb-6 text-xl font-bold">Address: {defaultAccount}</label>
+            {/* <h3> Address: {defaultAccount}</h3> */}
         </div>
         <div>
-            <h3> Balance: {userBalance}</h3>
+            <label class="text-white block mb-6 text-xl font-bold">Balance: {userBalance}</label>
+            {/* <h3> Balance: {userBalance}</h3> */}
         </div>
 
         {errorMessage}
