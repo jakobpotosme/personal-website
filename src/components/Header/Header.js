@@ -4,7 +4,7 @@ import Web3 from '../Web3/Web3';
 import Home from '../Homepage/Homepage';
 export default function Header() {
     return(
-        <Router>
+        // <Router>
             <header class="py-6 " >
                 <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
                     <div class="text-lg font-bold">Jakob Potosme</div>
@@ -22,13 +22,13 @@ export default function Header() {
                 </div>
             </header>
 
-            <Routes>
-                <Route path="/" element={ <Home />} /> 
-                <Route path="/web3" element={ <Web3 />} /> 
-                <Route path="*" />
-            </Routes>
+            // <Routes>
+                // <Route path="/" element={ <Home />} /> 
+                // <Route path="/web3" element={ <Web3 />} /> 
+                // <Route path="*" element = {} />
+            // </Routes>
 
-        </Router>
+        // </Router>
         
     );
 }

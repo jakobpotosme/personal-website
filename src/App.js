@@ -10,8 +10,22 @@ import {BrowserRouter as Router, Route,Routes, Link} from 'react-router-dom';
 
 function App() {
   return (
+    <Router>
+      <div>
+        <Header />
+        {/* <Home /> */}
+      </div>
 
-    <Header />
+
+      <Routes>
+        <Route path="/" element={ <Home />} /> 
+        <Route path="/web3" element={ <Web3 />} /> 
+        {/* <Route path="*" element = {} /> */}
+      </Routes>
+
+    </Router>
+    
+    
     // <Router>
     //   <div>
     //     {/* <Home /> */}
