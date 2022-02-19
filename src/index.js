@@ -8,7 +8,8 @@ import { ApolloClient, InMemoryCache,ApolloProvider,useQuery,gql} from "@apollo/
 const client = new ApolloClient({
   // uri: 'https://48p1r2roz4.sse.codesandbox.io',
   // uri: 'https://api.thegraph.com/subgraphs/name/wyze/treasure-marketplace',
-  uri: 'https://api.thegraph.com/subgraphs/name/wyze/treasure-marketplace',
+  // uri: 'https://api.thegraph.com/subgraphs/name/wyze/treasure-marketplace',
+  uri: 'https://api.thegraph.com/subgraphs/name/treasureproject/smolverse',
   cache: new InMemoryCache()
 })
 

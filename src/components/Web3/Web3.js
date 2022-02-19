@@ -1,5 +1,6 @@
 import { useQuery,gql} from "@apollo/client";
-// import Wallet from "./Wallet/Wallet";
+import Wallet from "./Wallet/Wallet";
+import Smolbrain from "./Smolbrain/Smolbrain"
 
 // const EXAMPLE = gql`
 //     query Example {
@@ -117,11 +118,11 @@ function Example2(){
 
 export default function Web3() {
     return (
-    <div>
-        <h1>COMING SOON</h1>   
+    <div >
+        {/* <h1 >COMING SOON</h1>    */}
         {/* <Example2 /> */}
-        <button class="enableEthereumButton">Enable Ethereum</button>
-        {/* <Wallet /> */}
+        <Wallet />
+        <Smolbrain />
         {/* <ExchangeRates />  */}
     </div>
     );

@@ -25,6 +25,7 @@ export default function Header() {
             <Routes>
                 <Route path="/" element={ <Home />} /> 
                 <Route path="/web3" element={ <Web3 />} /> 
+                <Route path="*" />
             </Routes>
 
         </Router>
