@@ -8,6 +8,7 @@ export default function Home() {
             {/* // Body  */}
             <div class="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
             <div class="flex flex-wrap md:flex-nowrap">
+                
 
                 {/* <img alt='profile' src={pfp2}  class="object-cover h-180 w-96 w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1 lg:mr-40 scale-125"></img> */}
                 <img alt='profile' src={pfp2}  class="object-cover h-180 w-96 w-3/4 mt-12 -mt-6 md:mt-0 right-0 -z-1 lg:mr-40 scale-75"></img>

@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 html,body {
   scroll-behavior: smooth;
+  /* background-color: #17171F; */
 }
 
 .left-50{
@@ -54,17 +53,6 @@ html,body {
   height: 80vh;
 }
 
-.nav-dot {
-  transition: background 200ms, border-color 200ms;
-}
-
-.selected-circle {
-  @apply border-theme bg-theme;
-}
-
-.nav-dot:hover span {
-  opacity: 1;
-}
 
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
