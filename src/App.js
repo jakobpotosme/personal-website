@@ -10,9 +10,10 @@ import {BrowserRouter as Router, Route,Routes, Link} from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div class="bg-body">
-        <Header />
-      </div>
+      {/* <div class="bg-body"> */}
+        {/* <Header /> */}
+        {/* <Header /> */}
+      {/* </div> */}
 
 
       <Routes>
