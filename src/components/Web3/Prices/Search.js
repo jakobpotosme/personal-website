@@ -35,7 +35,7 @@ const Search = () => {
         </div>
     
         
-        <div class='container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full pt-10'>
+        <div class='container justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full pt-10'>
             
             <input class="w-96 border border-input-border bg-input px-4 py-4" type="text"  placeholder="Ex: Bitcoin " onChange={handleChange} />
         </div>

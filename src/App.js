@@ -1,6 +1,6 @@
-import Header from './components/Header/Header'
 import Home from './components/Homepage/Homepage';
 import Web3 from './components/Web3/Web3';
+import Arbitrum from './components/Web3/Arbitrum/Arbitrum';
 import './App.css';
 import React from 'react';
 import {BrowserRouter as Router, Route,Routes, Link} from 'react-router-dom';
@@ -19,6 +19,7 @@ function App() {
       <Routes>
         <Route path="personal-website/" element={ <Home />} /> 
         <Route path="/web3" element={ <Web3 />} /> 
+        <Route path="/arbitrum" element= { <Arbitrum />} />
         {/* <Route path="*" element = {} /> */}
       </Routes>
 

@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 export default function Web3Header() {
     return(
         
-            <header class="py-6 mb-6" >
+            <header class="py-6 " >
                 <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full ">
                     <div class="text-lg font-bold">Jakob Potosme</div>
                     <div class='hidden md:flex space-x-12 items-center'>
                         <Link to='/personal-website' > Home</Link> 
                         <Link to='/web3'>Web 3</Link>
-                        
+                        <Link to='/arbitrum'>Arbitrum Network</Link>
                         {/* <a href="#about" >About Me</a>
                         <a href="#contact" ><button class="px-6 py-2 bg-theme font-bold">Contact Me</button></a>  */}
                     </div>
