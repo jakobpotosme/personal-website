@@ -31,8 +31,15 @@ const LoginwithEth = () =>{
 
   const accountChangedHandler = (newAccount) =>{
         setDefaultAccount(newAccount)
-        
+        getUserBalance(newAccount.toString())
     }
+  
+  const getUserBalance = (address) =>{
+      window.ethereum.request({method: 'eth_getBalance', params: [address, 'latest']})
+      .then(balance =>{
+          setUserBalance(ethers.utils.formatEther(balance))
+      })
+  }
   
   const chainChangedHandler = () =>{
       window.location.reload();
@@ -50,6 +57,10 @@ const LoginwithEth = () =>{
           <div >
               <label class="text-white block mb-6 text-xl font-bold">Address: {defaultAccount}</label>
               {/* <h3> Address: {defaultAccount}</h3> */}
+          </div>
+          <div>
+            <label class="text-white block mb-6 text-xl font-bold">Balance: {userBalance}</label>
+            {/* <h3> Balance: {userBalance}</h3> */}
           </div>
 
           {errorMessage}

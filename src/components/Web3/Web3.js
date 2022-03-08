@@ -9,7 +9,7 @@ export default function Web3() {
     <div >
         {/* <h1 >COMING SOON</h1>    */}
         <Web3Header />
-        <Wallet />
+        {/* <Wallet /> */}
         <Smolbrain />
         <Search />
         
