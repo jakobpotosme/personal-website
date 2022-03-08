@@ -52,7 +52,7 @@ const Arbitrum = () => {
             
             <div class="grid gap-4 grid-cols-3 grid-rows-3 ">
                 { data.collections.map( collection =>(
-                    <div class=" bg-input rounded-lg ">
+                    <div class=" bg-input rounded-lg hover:bg-zinc-500">
                         <div className='collection-name' class="container text-xl flex-col text-center mt-6 mb-2">
                             <h1 >{collection.name}</h1>
                             

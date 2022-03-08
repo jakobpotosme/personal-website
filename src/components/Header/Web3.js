@@ -12,6 +12,7 @@ export default function Web3Header() {
                         <Link to='/personal-website' > Home</Link> 
                         <Link to='/web3'>Web 3</Link>
                         <Link to='/arbitrum'>Arbitrum Network</Link>
+                        <Link to='/collection'>NFT Collection</Link>
                         {/* <a href="#about" >About Me</a>
                         <a href="#contact" ><button class="px-6 py-2 bg-theme font-bold">Contact Me</button></a>  */}
                     </div>
