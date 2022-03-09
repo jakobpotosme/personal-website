@@ -89,7 +89,7 @@ const MainnetTokens = ({userAddress}) =>{
     const [tokenData, setTokenData] = useState([])
     console.log(userAddress)
     useEffect( () =>{
-      // axios.get('https://api.opensea.io/api/v1/assets?owner=0xB84443Ab5a5d0bF883c417b22733c1b723E81f58&limit=100')
+  
       axios.get(`https://api.opensea.io/api/v1/assets?owner=${userAddress}&limit=100`)
       .then(res =>{
         console.log(res.data.assets)
