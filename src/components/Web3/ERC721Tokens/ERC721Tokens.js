@@ -4,12 +4,14 @@ import {ethers} from 'ethers';
 import axios from 'axios';
 import ArbitrumTokens from './ArbitrumTokens';
 import Web3Header from '../../Header/Web3';
+import OpenseaTokens from './OpenseaTokens';
 
 window.userAccount = ''
 
 const LoginwithEth = () =>{
   const [errorMessage, setErrorMessage] = useState(null);
   const [defaultAccount,setDefaultAccount] = useState(null)
+  const [defaultAccount_1,setDefaultAccount_1] = useState(null)
   const [userBalance,setUserBalance] = useState(null)
   const [connButtonText, setConnButtonText] = useState('Connect Wallet')
 
@@ -31,6 +33,7 @@ const LoginwithEth = () =>{
 
   const accountChangedHandler = (newAccount) =>{
         setDefaultAccount(newAccount)
+        setDefaultAccount_1(newAccount)
         getUserBalance(newAccount.toString())
     }
   
@@ -67,14 +70,73 @@ const LoginwithEth = () =>{
 
       </div>
 
-      {defaultAccount && <ERC721Tokens address = {defaultAccount} />}
+      {defaultAccount && 
+      <div>
+        <ERC721Tokens address = {defaultAccount} /> 
+        {/* <OpenseaTokens address={defaultAccount}  /> */}
+      
+      </div>
+      }
 
+      {/* {defaultAccount && <OpenseaTokens />} */}
     </div>
     
     
   )
 }
 
+const MainnetTokens = ({userAddress}) =>{
+    const [tokenData, setTokenData] = useState([])
+    console.log(userAddress)
+    useEffect( () =>{
+      // axios.get('https://api.opensea.io/api/v1/assets?owner=0xB84443Ab5a5d0bF883c417b22733c1b723E81f58&limit=100')
+      axios.get(`https://api.opensea.io/api/v1/assets?owner=${userAddress}&limit=100`)
+      .then(res =>{
+        console.log(res.data.assets)
+        setTokenData(res.data.assets)
+        // res.data.map((nft) =>{
+
+        // })
+      })
+      .catch(error =>{
+        console.log(error)
+      })
+    }, [])
+
+
+    const filteredTokenData = tokenData.filter(token => token.collection.safelist_request_status === "approved" || token.collection.safelist_request_status === "verified" )
+    console.log("newsss")
+    console.log(filteredTokenData)
+    return( 
+      <div>
+        
+        <div class="text-white block mb-6 text-2xl font-bold text-center py-6" >
+          <label>Mainnet NFT's</label>
+        </div>
+
+        <div class="grid gap-4 grid-cols-3 grid-rows-3 ">
+          {filteredTokenData.map(token =>{
+
+            return(
+              <div>
+
+                <OpenseaTokens 
+                // key = {token.address}
+                link = {token.permalink}
+                name = {token.name}
+                image = {token.image_url}
+                description = {token.description}
+                
+                />
+              </div>
+            )
+
+          })}
+        </div>
+      </div>
+    )
+
+} 
 
 const ERC721Tokens = ({address}) => {
   
@@ -86,7 +148,7 @@ const ERC721Tokens = ({address}) => {
     useEffect( () =>{
         axios.get(`https://api.arbiscan.io/api?module=account&action=tokennfttx&address=${address}&startblock=0&endblock=999999999&sort=asc`)
         .then(res =>{
-          console.log(res.data.result)
+          // console.log(res.data.result)
           setTokenData(res.data.result)
           
         })
@@ -113,9 +175,9 @@ const ERC721Tokens = ({address}) => {
           {/* // <div > */}
             {filteredTokenData.map(token =>{
           
-              if ( token.tokenName === "Smol Brain"){
-                  console.log(token.tokenName)
-              }
+              // if ( token.tokenName === "Smol Brain"){
+              //     console.log(token.tokenName)
+              // }
               return(
                 <div>
                   
@@ -134,6 +196,8 @@ const ERC721Tokens = ({address}) => {
             })}
 
           </div>
+
+          <MainnetTokens userAddress = {address}/>
       </div>
     
   )
