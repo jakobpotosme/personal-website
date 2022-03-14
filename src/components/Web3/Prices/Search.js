@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios';
 import Coin from './Coin';
+import Web3Header from '../../Header/Web3';
 
 const Search = () => {
   
@@ -28,6 +29,7 @@ const Search = () => {
 
     return (
     <div >
+        <Web3Header />
         <div class=" ">
             <label class="text-center text-white block mb-6 text-xl font-bold pt-20 ">Search a Currency</label>
             {/* <p class="section-paragraph text-lg text-white text-center block xl:ml-96">Coins from top 100</p> */}

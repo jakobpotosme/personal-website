@@ -1,6 +1,7 @@
 import pfp2 from '../../pfp2.png';
 import Header from '../Header/Header'
 import Contact from './Contact';
+import MainFooter from '../Footer/MainFooter';
 
 export default function Home() {
     return (
@@ -108,6 +109,8 @@ export default function Home() {
 
 
             {/* Bottom Div  */}
+
+            <MainFooter />
         </div>
         
 
