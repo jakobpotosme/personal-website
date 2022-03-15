@@ -16,7 +16,7 @@ export default function Home() {
                 <img alt='profile' src={pfp2}  class="object-cover h-180 w-96 w-3/4 mt-12 -mt-6 md:mt-0 right-0 -z-1 lg:mr-40 scale-75"></img>
 
                 <div class="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
-                <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left"> Building <br/> beautiful web experiences</h1>
+                <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left"> Building <br/> Beautiful Web Experiences</h1>
                 {/* <button class="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
                             <span>View my work.</span>
                         </button> */}
@@ -30,7 +30,7 @@ export default function Home() {
                 <section class="w-full">
                         <h2 id="about" class="secondary-title">About Me</h2>
                         <p class="section-paragraph text-lg">I’ve had the pleasure of working on multiple projects, designing and implementing both frontend and backend.</p>
-                <p class="text-lg" >I am a fresh university graduate. This site will showcase the skills I have learned and will become a central hub for all the projects that I work on in the future. If youre interested in looking at my past projects, feel free to check out my github!</p>
+                <p class="text-lg" >I am a developer. This site will showcase the skills I have learned and will become a central hub for all the projects that I work on in the future. If youre interested in looking at my past projects, feel free to check out my github!</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                             {/* <img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
                             <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">

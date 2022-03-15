@@ -34,7 +34,8 @@ export default function Web3() {
 
                     <h3 class="text-left text-4xl mt-6 font-semibold ">View your digital assets</h3>
                     <p class="text-left text-xl mt-6 font-normal text-neutral-400 ">Here you will be able to view what you own accross the Ethereum and Arbitrum Chain!</p>
-                    <button class="rounded-lg px-6 py-2 outline outline-blue-500 hover:bg-blue-600 text-white font-bold mt-6 "> <a href="/collection">View</a> </button>
+                    <a href="/collection"><button class="rounded-lg px-6 py-2 outline outline-blue-500 hover:bg-blue-600 text-white font-bold mt-6 "> View </button></a>
+                    
                 </div>
             </div>
 
@@ -47,7 +48,8 @@ export default function Web3() {
 
                     <h3 class="text-left text-4xl mt-6 font-semibold ">Track the Treasure Ecosystem </h3>
                     <p class="text-left text-xl mt-6 font-normal text-neutral-400 ">Stay up to date with the best WEB3 community built on the L2 Arbitrum Network !</p>
-                    <button class="rounded-lg px-6 py-2 outline outline-blue-500 hover:bg-blue-600 text-white font-bold mt-6 "> <a href="/arbitrum">Track</a> </button>
+                    <a href="/arbitrum"><button class="rounded-lg px-6 py-2 outline outline-blue-500 hover:bg-blue-600 text-white font-bold mt-6 "> Track </button></a>
+                    
                 </div>
                 <div className="side-image" class=" pl-20">
                     
@@ -66,7 +68,8 @@ export default function Web3() {
 
                     <h3 class="text-left text-4xl mt-6 font-semibold ">Live Coin Data</h3>
                     <p class="text-left text-xl mt-6 font-normal text-neutral-400 ">Curious of current coin price action? No need click here!</p>
-                    <button class="rounded-lg px-6 py-2 outline outline-blue-500 hover:bg-blue-600 text-white font-bold mt-6 "> <a href="/coins">View</a> </button>
+                    <a href="/coins"><button class="rounded-lg px-6 py-2 outline outline-blue-500 hover:bg-blue-600 text-white font-bold mt-6 "> View </button></a>
+                    
                 </div>
             </div>
 

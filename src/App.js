@@ -20,7 +20,7 @@ function App() {
 
 
       <Routes>
-        <Route path="personal-website/" element={ <Home />} /> 
+        <Route path="/" element={ <Home />} /> 
         <Route path="/web3" element={ <Web3 />} /> 
         <Route path="/arbitrum" element= { <Arbitrum />} />
         <Route path='/collection' element = { <ERC721Tokens />} />
