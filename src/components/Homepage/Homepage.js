@@ -29,8 +29,21 @@ export default function Home() {
             <div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
                 <section class="w-full">
                         <h2 id="about" class="secondary-title">About Me</h2>
-                        <p class="section-paragraph text-lg">I’ve had the pleasure of working on multiple projects, designing and implementing both frontend and backend.</p>
-                <p class="text-lg" >I am a developer. This site will showcase the skills I have learned and will become a central hub for all the projects that I work on in the future. If youre interested in looking at my past projects, feel free to check out my github!</p>
+                        <p class="section-paragraph text-lg"></p>
+                {/* <p class="text-lg" >I am a developer. I’ve had the pleasure of working on multiple projects, designing and implementing both frontend and backend. This site will showcase the skills I have learned and will become a central hub for all the projects that I work on in the future. If youre interested in looking at my past projects, feel free to check out my github!</p>
+                 */}
+                        <p>Hello! My name is Jakob Potosme. <br />
+                        I recently graduated with a Computer Science and Engineering degree from the University of California, Merced. 
+                        
+                        As a developer, I have had the pleasure of working on numerous projects turning ideas into a reality by designing and creating applications from start to finish.
+                        
+                        I am currently seeking opportunities that will allow me to use the skills that I have learned from both university and personal projects, 
+                        in order to make a difference as a professional developer. 
+                        
+                        This site will showcase the skills that I have learned and will become a central hub for my future projects.
+                        
+                        If you are interested in my past projects check out my github!
+                        </p>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                             {/* <img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
                             <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
