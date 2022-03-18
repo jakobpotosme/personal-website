@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import emailjs from 'emailjs-com'
+import Confetti from 'react-dom-confetti';
 
 
 
@@ -9,6 +10,7 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [emailSent, setEmailSent] = useState(false);
+    const [confetti,setConfetti] = useState(false)
     
     const submit = () => {
         if (name && email && message) {
@@ -37,6 +39,7 @@ const Contact = () => {
             setEmail('');
             setMessage('');
             setEmailSent(true);
+            setConfetti(true)
         } else {
             alert('Please fill in all fields.');
         }
@@ -46,6 +49,20 @@ const Contact = () => {
         const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return regex.test(String(email).toLowerCase());
     };
+
+    const config = {
+        angle: 90,
+        spread: 360,
+        startVelocity: 40,
+        elementCount: 70,
+        dragFriction: 0.12,
+        duration: 3000,
+        stagger: 3,
+        width: "10px",
+        height: "10px",
+        perspective: "500px",
+        colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+        };
 
   return (
     <div>
@@ -69,7 +86,8 @@ const Contact = () => {
                         <label class="text-white block mb-6 text-xl font-bold">Message</label>
                         <textarea type="email" class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none" value={message} onChange={e => setMessage(e.target.value) }></textarea>
                     </div>
-                    <button class="px-6 py-2 bg-theme text-white font-bold" onClick={submit}>Send it!</button>
+                    <button class="px-6 py-2 bg-theme text-white font-bold " onClick={submit}>Send it!</button>
+                    <Confetti active={ confetti } config={config} />
                     {/* <span className={emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span> */}
                 </div>
 
