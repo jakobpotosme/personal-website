@@ -54,15 +54,15 @@ const LoginwithEth = () =>{
   return (
     <div>
       <Web3Header />
-      <div class='container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full pt-10' >
+      <div class='container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full pt-10 ' >
           {/* <h4>{"Connection to MetaMask using window.ethereum methods"} </h4> */}
           <button class="px-6 py-2 bg-theme text-white font-bold" onClick={connectWalletHandler} > {connButtonText} </button>
           <div >
-              <label class="text-white block mb-6 text-xl font-bold">Address: {defaultAccount}</label>
+              <label class="text-white block mb-6 text-xl font-bold md:break-words ">Address: {defaultAccount}</label>
               {/* <h3> Address: {defaultAccount}</h3> */}
           </div>
           <div>
-            <label class="text-white block mb-6 text-xl font-bold">Balance: {userBalance}</label>
+            <label class="text-white block mb-6 text-xl font-bold break-words">Balance: {userBalance}</label>
             {/* <h3> Balance: {userBalance}</h3> */}
           </div>
 
@@ -87,7 +87,7 @@ const LoginwithEth = () =>{
 
 const MainnetTokens = ({userAddress}) =>{
     const [tokenData, setTokenData] = useState([])
-    console.log(userAddress)
+    
     useEffect( () =>{
   
       axios.get(`https://api.opensea.io/api/v1/assets?owner=${userAddress}&limit=100`)
@@ -105,8 +105,7 @@ const MainnetTokens = ({userAddress}) =>{
 
 
     const filteredTokenData = tokenData.filter(token => token.collection.safelist_request_status === "approved" || token.collection.safelist_request_status === "verified" )
-    console.log("newsss")
-    console.log(filteredTokenData)
+    
     return( 
       <div>
         
