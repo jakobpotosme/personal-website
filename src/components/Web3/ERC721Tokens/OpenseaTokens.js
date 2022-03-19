@@ -39,7 +39,7 @@ const OpenseaTokens = ({name,image,key,description,address, link, slug}) => {
               <div class="grid grid-cols-1 gap-y-6">
                 <img class="w-1/3 place-self-center pt-2 " src = {image} alt="nft" />
                 {/* <img class=" h-48 place-self-center mb-6 w-full object-cover md:h-full md:w-48" src = {image} alt="nft" /> */}
-                <p>Floor Price: {collectionStats.stats.floor_price}</p>
+                {/* <p>Floor Price: {collectionStats.stats.floor_price}</p> */}
                 <a href={`${link}`}> <p class="break-words">{link}</p></a>  
               </div>
               
