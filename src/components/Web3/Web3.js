@@ -4,7 +4,6 @@ import Smolbrain from "./Smolbrain/Smolbrain"
 import Search from "./Prices/Search";
 import Web3Header from "../Header/Web3"
 import Footer from "../Footer/Footer";
-import Web3Cards from "./Web3Cards/Web3Cards";
 import gallery from "../../image/gallery (2).png"
 import coins from "../../image/coins.png"
 import treasure from "../../image/treasure.png"

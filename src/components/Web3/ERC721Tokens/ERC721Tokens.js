@@ -124,6 +124,7 @@ const MainnetTokens = ({userAddress}) =>{
                 link = {token.permalink}
                 name = {token.name}
                 image = {token.image_url}
+                slug = {token.collection.slug}
                 description = {token.description}
                 
                 />
